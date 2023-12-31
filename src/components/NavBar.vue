@@ -1,11 +1,11 @@
 <template>
   <ul class="flex">
-    <li>Início</li>
-    <li>Sobre Nós</li>
-    <li>Cursos</li>
-    <li>Parceiros</li>
-    <li>Transparência</li>
-    <li>Contato</li>
+    <li><router-link to="/">Início</router-link></li>
+    <li><router-link to="/">Sobre Nós</router-link></li>
+    <li><router-link to="/cursos">Cursos</router-link></li>
+    <li><router-link to="/parceiros">Parceiros</router-link></li>
+    <li><router-link to="/transparencia">Transparência</router-link></li>
+    <li><router-link to="/contato">Contato</router-link></li>
   </ul>
 </template>
 

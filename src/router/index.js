@@ -22,6 +22,11 @@ const routes = [
     component: CourseInfo,
   },
   {
+    path: '/cursos',
+    name: 'cursos',
+    component: CourseInfo,
+  },
+  {
     path: '/parceiros',
     name: 'parceiros',
     component: OurPartners,

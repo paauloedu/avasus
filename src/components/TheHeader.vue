@@ -32,6 +32,7 @@ export default {
   min-height: 67px;
   position: fixed;
   background-color: $white;
+  z-index: 99;
   .inside {
     max-width: 1280px;
     padding: 11.5px 0;

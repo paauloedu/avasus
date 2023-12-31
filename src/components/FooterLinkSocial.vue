@@ -9,11 +9,11 @@
       <div class="links">
         <h2>Links Úteis</h2>
         <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Sobre Nós</a></li>
-          <li><a href="#">Módulos</a></li>
-          <li><a href="#">Parceiros</a></li>
-          <li><a href="#">Transparência</a></li>
+          <li><router-link to="/">Início</router-link></li>
+          <li><router-link to="/">Sobre Nós</router-link></li>
+          <li><router-link to="/modulos">Módulos</router-link></li>
+          <li><router-link to="/parceiros">Parceiros</router-link></li>
+          <li><router-link to="/transparencia">Transparência</router-link></li>
         </ul>
       </div>
       <div class="redes">
