@@ -16,8 +16,26 @@
           <li><router-link to="/transparencia">Transparência</router-link></li>
         </ul>
       </div>
-      <div class="redes">
+      <!-- TODO: Mudar o icon do facebook -->
+      <div>
         <h2>Redes Sociais</h2>
+        <ul class="redes">
+          <li>
+            <a href="https://www.facebook.com/LAIS.HUOL" target="_blank"
+              ><v-icon icon="mdi-facebook"></v-icon
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/laishuol" target="_blank"
+              ><v-icon icon="mdi-twitter"></v-icon
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/laishuol/" target="_blank"
+              ><v-icon icon="mdi-instagram"></v-icon
+            ></a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -46,5 +64,9 @@ h2 {
   a {
     font-size: 15px;
   }
+}
+.redes {
+  display: inline-flex;
+  gap: 50%;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <v-tabs v-model="tab">
-      <v-tab v-for="(item, index) in items" :key="index">
+      <v-tab v-for="(item, index) in items" :key="index" class="v-tab">
         {{ item.label }}
       </v-tab>
     </v-tabs>
@@ -22,11 +22,11 @@ export default {
     return {
       tab: 0,
       items: [
-        { label: 'Mais Populares' },
+        { label: 'Mais populares' },
         {
-          label: 'Mais Bem Avaliados',
+          label: 'Mais bem avaliados',
         },
-        { label: 'Mais Recentes' },
+        { label: 'Mais recentes' },
       ],
     };
   },
@@ -42,5 +42,15 @@ export default {
   font-weight: 600;
   justify-content: flex-start;
   margin: 20px 0;
+}
+.v-tab {
+  font-size: 16px;
+  padding: 0;
+  text-transform: unset;
+  padding-right: 16px;
+  font-weight: bold;
+}
+:deep(.v-slide-group__content) {
+  gap: 16px;
 }
 </style>

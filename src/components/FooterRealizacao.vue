@@ -26,12 +26,10 @@
   }
   .execucao {
     margin: 0 auto;
-    img {
-      margin-right: 40px;
-    }
   }
   .flex {
     justify-content: center;
+    gap: 80px;
   }
 }
 </style>
