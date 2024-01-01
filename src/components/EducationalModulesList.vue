@@ -1,8 +1,8 @@
 <template>
   <div class="flex">
-    <div v-for="(item, index) in items" :key="index" class="curso">
+    <div v-for="(curso, index) in cursos" :key="index" class="curso">
       <v-img
-        :src="item.image"
+        :src="curso.capa"
         class="curso-imagem"
         height="90"
         width="90"
@@ -10,18 +10,18 @@
       ></v-img>
 
       <div class="card">
-        <p class="card-title">{{ item.title }}</p>
-        <span class="card-subtitle">{{ item.subtitle }}</span>
+        <p class="card-title">{{ curso.titulo }}</p>
+        <span class="card-subtitle">{{ curso.parceiros }}</span>
       </div>
 
       <!-- TODO: Extrair para component -->
       <div class="infos">
         <v-icon icon="mdi-account-multiple"></v-icon>
-        <span>{{ item.matriculados }}</span>
+        <span>{{ curso.matriculados }}</span>
         <v-icon icon="mdi-clock"></v-icon>
-        <span>{{ item.duracao }}</span>
+        <span>{{ curso.duracao }}</span>
         <v-rating
-          v-model="item.stars"
+          v-model="curso.avaliacao"
           half-increments
           readonly
           density="compact"
@@ -30,7 +30,9 @@
         ></v-rating>
         <!-- TODO: Criar utilitario -->
         <span>{{
-          item.stars % 1 === 0 ? item.stars.toFixed(1) : item.stars
+          curso.avaliacao % 1 === 0
+            ? curso.avaliacao.toFixed(1)
+            : curso.avaliacao
         }}</span>
       </div>
 
@@ -44,47 +46,48 @@ import ButtonViewModules from '../components/ButtonViewModules.vue';
 import { obterCursos } from '@/services/cursosService';
 
 export default {
+  props: {
+    tipoConsulta: {
+      type: String,
+      required: true,
+    },
+  },
+  watch: {
+    tipoConsulta: {
+      handler: 'atualizarConteudo',
+      immediate: true,
+    },
+  },
   components: {
     ButtonViewModules,
   },
   data() {
     return {
-      dados: null,
-      items: [
-        {
-          image: require('../assets/img/montagem-avasus.png'),
-          title: 'Sífilis: Aspectos Clínicos e Diagnóstico Diferencial',
-          subtitle: 'LAIS / EBSERH',
-          matriculados: '27645',
-          duracao: '4h30min',
-          stars: 5.0,
-        },
-        {
-          image: require('../assets/img/slide5.jpg'),
-          title: 'Sífilis: Aspectos Clínicos e Diagnóstico Diferencial',
-          subtitle: 'UFRN / SEDIS /  LAIS / EBSERH',
-          matriculados: '27645',
-          duracao: '4h30min',
-          stars: 4.0,
-        },
-        {
-          image: require('../assets/img/slide7.jpg'),
-          title: 'Políticas de atenção à saúde no sistema prisional',
-          subtitle: 'UFRN / LAIS / SEDIS / HUOL / EBSERH / UC / MS',
-          matriculados: '27645',
-          duracao: '4h30min',
-          stars: 4.5,
-        },
-      ],
+      cursos: null,
     };
   },
-  async created() {
-    try {
-      this.dados = await obterCursos();
-      console.log(this.dados);
-    } catch (error) {
-      console.log(error);
-    }
+  methods: {
+    //TODO: Melhorar isso talvez
+    async atualizarConteudo() {
+      try {
+        let sort = '';
+        if (this.tipoConsulta === 'populares') {
+          sort = 'matriculados';
+        } else if (this.tipoConsulta === 'bem-avaliados') {
+          sort = 'avaliacao';
+        } else {
+          sort = 'criado_em';
+        }
+        this.cursos = await obterCursos({
+          _limit: 3,
+          _sort: sort,
+          _order: 'desc',
+        });
+        console.log(this.cursos);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>

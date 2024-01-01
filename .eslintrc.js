@@ -18,7 +18,6 @@ module.exports = {
     curly: ['error', 'all'],
     'space-infix-ops': ['error', { int32Hint: false }],
     'one-var': ['error', 'never'],
-    camelcase: ['error', { properties: 'always' }],
     'comma-spacing': [
       'error',
       {

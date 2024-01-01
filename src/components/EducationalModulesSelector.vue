@@ -1,14 +1,23 @@
 <template>
   <div class="flex">
     <v-tabs v-model="tab">
-      <v-tab v-for="(item, index) in items" :key="index" class="v-tab">
+      <v-tab
+        v-for="(item, index) in items"
+        :key="index"
+        class="v-tab"
+        :value="item.tipoConsulta"
+      >
         {{ item.label }}
       </v-tab>
     </v-tabs>
 
     <v-window v-model="tab">
-      <v-window-item v-for="item in items" :key="item" :value="item">
-        <EducationalModulesList />
+      <v-window-item
+        v-for="item in items"
+        :key="item"
+        :value="item.tipoConsulta"
+      >
+        <EducationalModulesList :tipoConsulta="item.tipo_consulta" />
       </v-window-item>
     </v-window>
   </div>
@@ -20,13 +29,11 @@ import EducationalModulesList from './EducationalModulesList.vue';
 export default {
   data() {
     return {
-      tab: 0,
+      tab: 'populares',
       items: [
-        { label: 'Mais populares' },
-        {
-          label: 'Mais bem avaliados',
-        },
-        { label: 'Mais recentes' },
+        { label: 'Mais populares', tipo_consulta: 'populares' },
+        { label: 'Mais bem avaliados', tipo_consulta: 'bem-avaliados' },
+        { label: 'Mais recentes', tipo_consulta: 'recentes' },
       ],
     };
   },
