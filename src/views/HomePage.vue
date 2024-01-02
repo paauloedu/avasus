@@ -29,9 +29,21 @@ export default {
   },
   data: () => ({
     labels: [
-      { label: 'Mais populares', tipo_consulta: 'matriculados' },
-      { label: 'Mais bem avaliados', tipo_consulta: 'avaliacao' },
-      { label: 'Mais recentes', tipo_consulta: 'criado_em' },
+      {
+        label: 'Mais populares',
+        tipo_consulta: 'matriculados',
+        component: 'EducationalModulesList',
+      },
+      {
+        label: 'Mais bem avaliados',
+        tipo_consulta: 'avaliacao',
+        component: 'EducationalModulesList',
+      },
+      {
+        label: 'Mais recentes',
+        tipo_consulta: 'criado_em',
+        component: 'EducationalModulesList',
+      },
     ],
   }),
 };

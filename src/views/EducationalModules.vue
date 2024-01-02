@@ -9,19 +9,16 @@
 
       <h1>Módulos Educacionais</h1>
       <EducationalModulesSelector :items="labels" />
-      <ButtonViewMore />
     </div>
   </div>
 </template>
 
 <script>
 import EducationalModulesSelector from '@/components/EducationalModulesSelector.vue';
-import ButtonViewMore from '@/components/ButtonViewMore.vue';
 
 export default {
   components: {
     EducationalModulesSelector,
-    ButtonViewMore,
   },
   data: () => ({
     items: [
@@ -42,16 +39,44 @@ export default {
       },
     ],
     labels: [
-      { label: 'Covid 19', tipo_consulta: 'Covid 19' },
+      {
+        label: 'Covid 19',
+        tipo_consulta: 'Covid 19',
+        component: 'EducationalModulesFull',
+      },
       //FIXME: Não aparece em categoria,
-      { label: 'Sífilis e outras Ist’s', tipo_consulta: 'Sífilis' },
-      { label: 'Preceptoria', tipo_consulta: 'Preceptoria' },
-      { label: 'Doenças raras', tipo_consulta: 'Doenças raras' },
-      { label: 'Web Palestras', tipo_consulta: 'WebPalestras' },
+      {
+        label: 'Sífilis e outras Ist’s',
+        tipo_consulta: 'Sífilis',
+        component: 'EducationalModulesFull',
+      },
+      {
+        label: 'Preceptoria',
+        tipo_consulta: 'Preceptoria',
+        component: 'EducationalModulesFull',
+      },
+      {
+        label: 'Doenças raras',
+        tipo_consulta: 'Doenças raras',
+        component: 'EducationalModulesFull',
+      },
+      {
+        label: 'Web Palestras',
+        tipo_consulta: 'WebPalestras',
+        component: 'EducationalModulesFull',
+      },
       //FIXME: Nao aparece em categoria
-      { label: 'Sistemas prisional', tipo_consulta: 'Prisional' },
+      {
+        label: 'Sistemas prisional',
+        tipo_consulta: 'Prisional',
+        component: 'EducationalModulesFull',
+      },
       //FIXME: Aparece apenas em parceiros
-      { label: 'OPAS', tipo_consulta: 'OPAS' },
+      {
+        label: 'OPAS',
+        tipo_consulta: 'OPAS',
+        component: 'EducationalModulesFull',
+      },
     ],
   }),
 };

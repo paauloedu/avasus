@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex selector">
     <v-tabs v-model="tab">
       <v-tab
         v-for="(item, index) in items"
@@ -17,7 +17,7 @@
         :key="item"
         :value="item.tipoConsulta"
       >
-        <EducationalModulesList :tipo-consulta="item.tipo_consulta" />
+        <component :is="item.component" :tipo-consulta="item.tipo_consulta" />
       </v-window-item>
     </v-window>
   </div>
@@ -25,6 +25,7 @@
 
 <script>
 import EducationalModulesList from './EducationalModulesList.vue';
+import EducationalModulesFull from './EducationalModulesFull.vue';
 
 export default {
   props: {
@@ -39,12 +40,13 @@ export default {
       tab: null,
     };
   },
-  components: { EducationalModulesList },
+  components: { EducationalModulesList, EducationalModulesFull },
 };
 </script>
 
 <style lang="scss" scoped>
-.flex {
+.selector {
+  display: flex;
   flex-direction: column;
   gap: 20px;
   font-size: 20px;
@@ -61,5 +63,9 @@ export default {
 }
 :deep(.v-slide-group__content) {
   gap: 16px;
+}
+:deep(.v-slide-group__prev),
+:deep(.v-slide-group__next) {
+  display: none;
 }
 </style>
