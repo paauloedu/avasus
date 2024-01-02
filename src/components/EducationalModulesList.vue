@@ -67,20 +67,11 @@ export default {
     };
   },
   methods: {
-    //TODO: Melhorar isso talvez
     async atualizarConteudo() {
       try {
-        let sort = '';
-        if (this.tipoConsulta === 'populares') {
-          sort = 'matriculados';
-        } else if (this.tipoConsulta === 'bem-avaliados') {
-          sort = 'avaliacao';
-        } else {
-          sort = 'criado_em';
-        }
         this.cursos = await obterCursos({
           _limit: 3,
-          _sort: sort,
+          _sort: this.tipoConsulta,
           _order: 'desc',
         });
         console.log(this.cursos);

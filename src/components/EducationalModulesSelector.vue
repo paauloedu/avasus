@@ -17,7 +17,7 @@
         :key="item"
         :value="item.tipoConsulta"
       >
-        <EducationalModulesList :tipoConsulta="item.tipo_consulta" />
+        <EducationalModulesList :tipo-consulta="item.tipo_consulta" />
       </v-window-item>
     </v-window>
   </div>
@@ -27,14 +27,16 @@
 import EducationalModulesList from './EducationalModulesList.vue';
 
 export default {
+  props: {
+    items: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
+    //TODO: Verificar essa prop
     return {
-      tab: 'populares',
-      items: [
-        { label: 'Mais populares', tipo_consulta: 'populares' },
-        { label: 'Mais bem avaliados', tipo_consulta: 'bem-avaliados' },
-        { label: 'Mais recentes', tipo_consulta: 'recentes' },
-      ],
+      tab: null,
     };
   },
   components: { EducationalModulesList },

@@ -6,7 +6,7 @@
   <div class="flex config">
     <div class="inside">
       <h1>Módulos Educacionais</h1>
-      <EducationalModulesSelector />
+      <EducationalModulesSelector :items="labels" />
       <ButtonViewMore />
       <h1 style="margin-top: 40px; margin-bottom: 20px">Parceiros</h1>
       <ThePartners />
@@ -27,6 +27,13 @@ export default {
     ButtonViewMore,
     ThePartners,
   },
+  data: () => ({
+    labels: [
+      { label: 'Mais populares', tipo_consulta: 'matriculados' },
+      { label: 'Mais bem avaliados', tipo_consulta: 'avaliacao' },
+      { label: 'Mais recentes', tipo_consulta: 'criado_em' },
+    ],
+  }),
 };
 </script>
 

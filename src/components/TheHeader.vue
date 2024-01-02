@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <div class="inside flex">
-      <a href="/" style="height: 36px"><img src="../assets/img/logo.png" /></a>
+      <router-link to="/"><img src="../assets/img/logo.png" /></router-link>
       <NavBar />
       <SearchBar />
       <ButtonLogin />

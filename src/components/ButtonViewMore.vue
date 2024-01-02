@@ -1,5 +1,7 @@
 <template>
-  <base-button class="ver-mais">Ver mais</base-button>
+  <router-link to="/modulos">
+    <base-button class="ver-mais">Ver mais</base-button>
+  </router-link>
 </template>
 
 <script>
