@@ -1,11 +1,7 @@
 <template>
   <div class="flex config">
     <div class="inside">
-      <v-breadcrumbs density="compact" class="v-breadcrumbs" :items="items">
-        <template #title="{ item }">
-          {{ item.title }}
-        </template>
-      </v-breadcrumbs>
+      <BreadCrumbs :items="items" />
 
       <h1>Módulos Educacionais</h1>
       <EducationalModulesSelector :items="labels" />
@@ -15,27 +11,28 @@
 
 <script>
 import EducationalModulesSelector from '@/components/EducationalModulesSelector.vue';
+import BreadCrumbs from '@/components/BreadCrumbs.vue';
 
 export default {
   components: {
     EducationalModulesSelector,
+    BreadCrumbs,
   },
   data: () => ({
     items: [
       {
         title: 'Início',
         disabled: false,
-        href: '/',
+        to: { name: 'home' },
       },
       {
         title: 'Cursos',
         disabled: false,
-        href: '/',
+        to: { name: 'modulos' },
       },
       {
         title: 'Módulos',
         disabled: true,
-        href: '/modulos',
       },
     ],
     labels: [
@@ -88,10 +85,6 @@ export default {
     width: 900px;
     margin: 0 auto;
     text-align: center;
-  }
-  .v-breadcrumbs {
-    padding: 10px 6px;
-    margin-bottom: 30px;
   }
 }
 h1 {

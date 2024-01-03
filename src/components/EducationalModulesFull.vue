@@ -24,6 +24,13 @@
 
       <div class="curso-description">
         <span>{{ curso.sobre }}</span>
+        <div class="ver-curso">
+          <router-link
+            :to="{ name: 'cursos-detalhes', params: { id: curso.id } }"
+            class="btn-curso"
+            >Ver curso</router-link
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -145,6 +152,14 @@ export default {
       -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       overflow: hidden;
+    }
+  }
+  .ver-curso {
+    text-align: end;
+    display: grid;
+    .btn-curso {
+      color: $cor-botao;
+      font-size: 12px;
     }
   }
 }

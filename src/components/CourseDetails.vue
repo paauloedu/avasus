@@ -57,6 +57,4 @@ export default {
     position: relative;
   }
 }
-.small {
-}
 </style>

@@ -18,8 +18,9 @@ const routes = [
   },
   {
     path: '/cursos/:id',
-    name: 'cursos',
+    name: 'cursos-detalhes',
     component: CourseInfo,
+    props: true,
   },
   {
     path: '/cursos',
