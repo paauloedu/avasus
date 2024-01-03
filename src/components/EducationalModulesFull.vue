@@ -1,6 +1,9 @@
 <template>
   <div class="resultados">
-    <span>6 de {{}} resultados</span>
+    <span
+      >{{ Math.min(this.page * 6, this.totalResults) }} de
+      {{ this.totalResults }} resultados</span
+    >
   </div>
   <div class="flex row">
     <div v-for="(curso, index) in cursos" :key="index" class="curso">
@@ -24,7 +27,12 @@
       </div>
     </div>
   </div>
-  <v-pagination v-model="page" :total-visible="5" :length="100" />
+  <!-- TODO: Personalizar o CSS -->
+  <v-pagination
+    v-model="page"
+    :total-visible="5"
+    :length="Math.ceil(this.totalResults / 6)"
+  />
 </template>
 
 <script>
@@ -38,7 +46,6 @@ export default {
       required: true,
     },
   },
-  //TODO: Melhorar. Como pegar todos os possiveis resultados sem consultar o back?
   watch: {
     tipoConsulta: {
       handler: 'atualizarConteudo',
@@ -53,19 +60,25 @@ export default {
     return {
       cursos: null,
       page: 1,
+      totalResults: 0,
     };
   },
   methods: {
     async atualizarConteudo() {
       try {
-        //TODO: Pegar a pagina atual e atualizar conforme passa a paginação
-        console.log(this.page);
+        const totalResultsResponse = await obterCursos({
+          cateroria: this.tipoConsulta,
+        });
+
         this.cursos = await obterCursos({
           _page: this.page,
           _limit: 6,
           cateroria: this.tipoConsulta,
         });
-        console.log(this.cursos.length);
+
+        this.totalResults = totalResultsResponse.length;
+
+        console.log(`6 de ${this.totalResults} resultados`);
       } catch (error) {
         console.log(error);
       }
@@ -112,7 +125,7 @@ export default {
       -webkit-box-orient: vertical;
       text-overflow: ellipsis;
       font-size: 18px;
-      min-height: 2.6em;
+      min-height: 54px;
     }
     .card-subtitle {
       @extend .card-title;
@@ -120,7 +133,7 @@ export default {
       color: $vermelho-detalhe;
       font-weight: 600;
       font-size: 12px;
-      min-height: 2.4em;
+      min-height: 44px;
     }
   }
 

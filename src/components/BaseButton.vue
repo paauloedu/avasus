@@ -1,18 +1,8 @@
 <template>
-  <v-btn rounded outlined elevation="0" @click="handleClick">
+  <v-btn rounded outlined elevation="0">
     <slot></slot>
   </v-btn>
 </template>
-
-<script>
-export default {
-  methods: {
-    handleClick() {
-      this.$emit('click');
-    },
-  },
-};
-</script>
 
 <style lang="scss" scoped>
 .v-btn {

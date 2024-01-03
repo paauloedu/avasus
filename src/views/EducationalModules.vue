@@ -44,10 +44,9 @@ export default {
         tipo_consulta: 'Covid 19',
         component: 'EducationalModulesFull',
       },
-      //FIXME: Não aparece em categoria,
       {
         label: 'Sífilis e outras Ist’s',
-        tipo_consulta: 'Sífilis',
+        tipo_consulta: 'Síflis e outras ist',
         component: 'EducationalModulesFull',
       },
       {
@@ -65,13 +64,11 @@ export default {
         tipo_consulta: 'WebPalestras',
         component: 'EducationalModulesFull',
       },
-      //FIXME: Nao aparece em categoria
       {
         label: 'Sistemas prisional',
-        tipo_consulta: 'Prisional',
+        tipo_consulta: 'Sistema prisional',
         component: 'EducationalModulesFull',
       },
-      //FIXME: Aparece apenas em parceiros
       {
         label: 'OPAS',
         tipo_consulta: 'OPAS',
