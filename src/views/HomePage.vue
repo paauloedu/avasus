@@ -1,15 +1,17 @@
 <template>
-  <!-- Slide -->
-  <TheSlide />
+  <div>
+    <!-- Slide -->
+    <TheSlide />
 
-  <!-- Conteudo -->
-  <div class="flex config">
-    <div class="inside">
-      <h1>Módulos Educacionais</h1>
-      <EducationalModulesSelector :items="labels" />
-      <ButtonViewMore />
-      <h1 style="margin-top: 40px; margin-bottom: 20px">Parceiros</h1>
-      <ThePartners />
+    <!-- Conteudo -->
+    <div class="flex config">
+      <div class="inside">
+        <h1>Módulos Educacionais</h1>
+        <EducationalModulesSelector :items="labels" />
+        <ButtonViewMore />
+        <h1 style="margin-top: 40px; margin-bottom: 20px">Parceiros</h1>
+        <ThePartners />
+      </div>
     </div>
   </div>
 </template>

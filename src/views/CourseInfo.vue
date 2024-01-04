@@ -74,7 +74,6 @@ export default {
         disabled: false,
         to: { name: 'modulos' },
       },
-      //TODO: Dinamico
       {
         title: '',
         disabled: true,
@@ -84,7 +83,8 @@ export default {
   async created() {
     try {
       this.curso = await obterCursoPorId(this.$route.params.id);
-      console.log(this.curso);
+      //TODO: Limitar css, agora
+      this.items[3].title = this.curso.titulo;
     } catch (error) {
       console.log(error);
     }

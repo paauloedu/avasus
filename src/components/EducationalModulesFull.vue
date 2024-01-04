@@ -85,8 +85,6 @@ export default {
         });
 
         this.totalResults = totalResultsResponse.length;
-
-        console.log(`6 de ${this.totalResults} resultados`);
       } catch (error) {
         console.log(error);
       }

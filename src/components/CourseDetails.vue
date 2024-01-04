@@ -1,13 +1,13 @@
 <template>
   <div v-if="showDate" class="curso-info" :class="{ small: small }">
-    <v-icon icon="mdi-clock"></v-icon>
+    <v-icon icon="mdi-clock" />
     <!-- TODO: Criar utilitario -->
     <span>{{ cursoValue.duracao.replace('h', ' horas') }}</span>
 
-    <v-icon icon="mdi-calendar-check"></v-icon>
+    <v-icon icon="mdi-calendar-check" />
     <span>Desde {{ cursoValue.criado_em }}</span>
 
-    <v-icon icon="mdi-account-multiple"></v-icon>
+    <v-icon icon="mdi-account-multiple" />
     <span>{{ cursoValue.matriculados }} alunos matriculados</span>
 
     <v-rating
@@ -15,7 +15,7 @@
       half-increments
       readonly
       density="compact"
-    ></v-rating>
+    />
     <!-- TODO: Criar utilitario -->
     <span
       >{{
@@ -28,13 +28,10 @@
   </div>
   <!-- Telas sem data -->
   <div v-else class="infos" :class="{ small: small }">
-    <v-icon
-      :size="small ? `x-small` : `default`"
-      icon="mdi-account-multiple"
-    ></v-icon>
+    <v-icon :size="small ? `x-small` : `default`" icon="mdi-account-multiple" />
     <span>{{ cursoValue.matriculados }}</span>
 
-    <v-icon :size="small ? `x-small` : `default`" icon="mdi-clock"></v-icon>
+    <v-icon :size="small ? `x-small` : `default`" icon="mdi-clock" />
     <span>{{ cursoValue.duracao }}</span>
 
     <v-rating
@@ -44,7 +41,7 @@
       :size="small ? `x-small` : `default`"
       density="compact"
       class="rating"
-    ></v-rating>
+    />
     <!-- TODO: Criar utilitario -->
     <span>{{
       cursoValue.avaliacao % 1 === 0

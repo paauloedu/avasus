@@ -101,20 +101,5 @@ export default {
       font-size: 12px;
     }
   }
-  .infos {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: $vermelho-detalhe;
-    span {
-      color: $cor-secundaria;
-      font-weight: 100;
-      font-size: 15px;
-    }
-    .rating {
-      bottom: 3px;
-      position: relative;
-    }
-  }
 }
 </style>

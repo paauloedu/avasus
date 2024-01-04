@@ -1,7 +1,9 @@
 <template>
   <v-breadcrumbs density="compact" class="v-breadcrumbs" :items="items">
     <template #title="{ item }">
-      {{ item.title }}
+      <span :class="{ 'last-item': item === items[items.length - 1] }">{{
+        item.title
+      }}</span>
     </template>
   </v-breadcrumbs>
 </template>
@@ -21,5 +23,13 @@ export default {
 .v-breadcrumbs {
   padding: 10px 6px;
   margin-bottom: 30px;
+}
+.last-item {
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 </style>

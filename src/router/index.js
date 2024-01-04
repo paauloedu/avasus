@@ -4,6 +4,7 @@ import EducationalModules from '../views/EducationalModules.vue';
 import CourseInfo from '../views/CourseInfo.vue';
 import OurPartners from '../views/OurPartners.vue';
 import TransparecyPage from '../views/TransparecyPage.vue';
+import NotFoundPage from '../views/NotFoundPage.vue';
 
 const routes = [
   {
@@ -23,11 +24,6 @@ const routes = [
     props: true,
   },
   {
-    path: '/cursos',
-    name: 'cursos',
-    component: CourseInfo,
-  },
-  {
     path: '/parceiros',
     name: 'parceiros',
     component: OurPartners,
@@ -36,6 +32,11 @@ const routes = [
     path: '/transparencia',
     name: 'transparencia',
     component: TransparecyPage,
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: NotFoundPage,
   },
 ];
 
