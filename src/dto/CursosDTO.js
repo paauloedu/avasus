@@ -12,11 +12,13 @@ export default class CursoDTO {
     avaliacao,
     numero_avaliacoes,
     sobre,
+    recursos_educacionais,
     objetivo_geral,
     objetivo_especifico,
     conteudo,
     creditos,
   }) {
+    // TODO: Revisar
     this.id = Number(id);
     this.cateroria = cateroria;
     this.capa = capa;
@@ -29,6 +31,7 @@ export default class CursoDTO {
     this.avaliacao = Number(avaliacao);
     this.numero_avaliacoes = Number(numero_avaliacoes);
     this.sobre = sobre;
+    this.recursos_educacionais = recursos_educacionais;
     this.objetivo_geral = objetivo_geral;
     this.objetivo_especifico = objetivo_especifico;
     this.conteudo = conteudo;

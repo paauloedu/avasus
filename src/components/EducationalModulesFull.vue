@@ -28,8 +28,9 @@
           <router-link
             :to="{ name: 'cursos-detalhes', params: { id: curso.id } }"
             class="btn-curso"
-            >Ver curso</router-link
           >
+            Ver curso
+          </router-link>
         </div>
       </div>
     </div>
@@ -105,7 +106,6 @@ export default {
   }
 }
 .row {
-  //TODO: Remover important, melhorar.
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -152,6 +152,7 @@ export default {
       -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      min-height: 90px;
     }
   }
   .ver-curso {
