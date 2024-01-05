@@ -41,25 +41,24 @@ export default {
       },
       chartOptions: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         plugins: {
           legend: {
             position: 'bottom',
+            align: 'start',
             labels: {
               usePointStyle: true,
               align: 'start',
               padding: 20,
-              fontSize: 18,
+              font: {
+                weight: 'bold',
+                size: 16,
+              },
             },
           },
         },
       },
     };
-  },
-  mounted() {
-    this.$nextTick(() => {
-      ChartJS.overrides['pie'].plugins.legend.labels.textAlign = 'left';
-    });
   },
 };
 </script>

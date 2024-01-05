@@ -10,7 +10,7 @@
 
     <div class="inside">
       <h1>Informações gerais do Curso</h1>
-      <CourseDetails :curso="curso" :showDate="true" />
+      <CourseDetails :curso="curso" :show-date="true" />
       <h2>Sobre o curso</h2>
       <p class="justify">{{ curso.sobre }}</p>
 
