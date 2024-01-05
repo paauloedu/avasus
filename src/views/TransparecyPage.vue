@@ -41,8 +41,18 @@
       </div>
 
       <div class="usuarios">
-        <div class="usuarios-por-curso"></div>
-        <div class="usuarios-por-estado"></div>
+        <div class="usuarios-por-curso">
+          <h2>Usuários por curso</h2>
+          <div>
+            <pie-chart
+              v-if="loaded"
+              :usuarios-por-curso="transparencia.usuarios_por_curso"
+            />
+          </div>
+        </div>
+        <div class="usuarios-por-estado">
+          <h2>Usuários por Estado</h2>
+        </div>
       </div>
 
       {{ transparencia.dados_gerais }}
@@ -54,13 +64,16 @@
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import TransparenciaDTO from '@/dto/TransparenciaDTO';
 import { obterTransparencia } from '@/services/transparenciaService';
+import PieChart from '@/components/PieChart.vue';
 
 export default {
   components: {
     BreadCrumbs,
+    PieChart,
   },
   data: () => ({
     transparencia: TransparenciaDTO,
+    loaded: null,
     items: [
       {
         title: 'Início',
@@ -76,6 +89,7 @@ export default {
   async created() {
     try {
       this.transparencia = await obterTransparencia();
+      this.loaded = true;
       console.log(this.transparencia);
     } catch (error) {
       console.log(error);
@@ -101,36 +115,41 @@ export default {
   .dados-detalhes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     margin: 20px 0;
     span {
       font-size: 15px;
+      font-weight: bold;
     }
     p {
       font-size: 22px;
-      color: $vermelho-detalhe;
+      color: $cor-primaria;
       margin-top: 5px;
       font-weight: bold;
     }
     div {
-      margin-bottom: 10px;
-      flex: 0 0 25%;
+      margin-bottom: 20px;
     }
     .dados-info {
       margin-right: 6px;
-      color: $vermelho-detalhe;
+      color: $cor-primaria;
     }
   }
-  h2 {
-    font-size: 20px;
-    color: $cor-primaria;
-  }
 }
-
+h2 {
+  font-size: 20px;
+  color: $cor-primaria;
+}
 .usuarios {
   display: flex;
-  flex: 0 0 40%;
-  gap: 20;
+  margin-top: 20px;
+  justify-content: space-between;
+  .usuarios-por-curso,
+  .usuarios-por-estado {
+    flex: 0 0 49%;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 .dados-gerais,
 .usuarios-por-curso,
