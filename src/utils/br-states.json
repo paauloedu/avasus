@@ -1,13 +1,23 @@
 [
   {
+    "name": "Goiás",
+    "latitude": -16.64,
+    "longitude": -49.31
+  },
+  {
+    "name": "São Paulo",
+    "latitude": -23.55,
+    "longitude": -46.64
+  },
+  {
+    "name": "Pernambuco",
+    "latitude": -8.28,
+    "longitude": -35.07
+  },
+  {
     "name": "Acre",
     "latitude": -8.77,
     "longitude": -70.55
-  },
-  {
-    "name": "Alagoas",
-    "latitude": -9.71,
-    "longitude": -35.73
   },
   {
     "name": "Amazonas",
@@ -15,44 +25,29 @@
     "longitude": -61.66
   },
   {
-    "name": "Amapá",
-    "latitude": 1.41,
-    "longitude": -51.77
-  },
-  {
-    "name": "Bahia",
-    "latitude": -12.96,
-    "longitude": -38.51
-  },
-  {
-    "name": "Ceará",
-    "latitude": -3.71,
-    "longitude": -38.54
-  },
-  {
-    "name": "Distrito Federal",
-    "latitude": -15.83,
-    "longitude": -47.86
-  },
-  {
-    "name": "Espírito Santo",
-    "latitude": -19.19,
-    "longitude": -40.34
-  },
-  {
-    "name": "Goiás",
-    "latitude": -16.64,
-    "longitude": -49.31
-  },
-  {
     "name": "Maranhão",
     "latitude": -2.55,
     "longitude": -44.3
   },
   {
-    "name": "Mato Grosso",
-    "latitude": -12.64,
-    "longitude": -55.42
+    "name": "Pará",
+    "latitude": -5.53,
+    "longitude": -52.29
+  },
+  {
+    "name": "Rondônia",
+    "latitude": -11.22,
+    "longitude": -62.8
+  },
+  {
+    "name": "Tocantins",
+    "latitude": -10.25,
+    "longitude": -48.25
+  },
+  {
+    "name": "Distrito Federal",
+    "latitude": -15.83,
+    "longitude": -47.86
   },
   {
     "name": "Mato Grosso do Sul",
@@ -65,14 +60,14 @@
     "longitude": -44.38
   },
   {
-    "name": "Pará",
-    "latitude": -5.53,
-    "longitude": -52.29
+    "name": "Mato Grosso",
+    "latitude": -12.64,
+    "longitude": -55.42
   },
   {
-    "name": "Paraíba",
-    "latitude": -7.06,
-    "longitude": -35.55
+    "name": "Rio Grande do Sul",
+    "latitude": -30.01,
+    "longitude": -51.22
   },
   {
     "name": "Paraná",
@@ -80,14 +75,39 @@
     "longitude": -51.55
   },
   {
-    "name": "Pernambuco",
-    "latitude": -8.28,
-    "longitude": -35.07
+    "name": "Santa Catarina",
+    "latitude": -27.33,
+    "longitude": -49.44
+  },
+  {
+    "name": "Ceará",
+    "latitude": -3.71,
+    "longitude": -38.54
   },
   {
     "name": "Piauí",
     "latitude": -8.28,
     "longitude": -43.68
+  },
+  {
+    "name": "Alagoas",
+    "latitude": -9.71,
+    "longitude": -35.73
+  },
+  {
+    "name": "Bahia",
+    "latitude": -12.96,
+    "longitude": -38.51
+  },
+  {
+    "name": "Espírito Santo",
+    "latitude": -19.19,
+    "longitude": -40.34
+  },
+  {
+    "name": "Paraíba",
+    "latitude": -7.06,
+    "longitude": -35.55
   },
   {
     "name": "Rio de Janeiro",
@@ -100,14 +120,9 @@
     "longitude": -36.52
   },
   {
-    "name": "Rondônia",
-    "latitude": -11.22,
-    "longitude": -62.8
-  },
-  {
-    "name": "Rio Grande do Sul",
-    "latitude": -30.01,
-    "longitude": -51.22
+    "name": "Sergipe",
+    "latitude": -10.9,
+    "longitude": -37.07
   },
   {
     "name": "Roraima",
@@ -115,23 +130,8 @@
     "longitude": -61.22
   },
   {
-    "name": "Santa Catarina",
-    "latitude": -27.33,
-    "longitude": -49.44
-  },
-  {
-    "name": "Sergipe",
-    "latitude": -10.9,
-    "longitude": -37.07
-  },
-  {
-    "name": "São Paulo",
-    "latitude": -23.55,
-    "longitude": -46.64
-  },
-  {
-    "name": "Tocantins",
-    "latitude": -10.25,
-    "longitude": -48.25
+    "name": "Amapá",
+    "latitude": 1.41,
+    "longitude": -51.77
   }
 ]

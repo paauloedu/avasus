@@ -19,7 +19,7 @@ export default {
       )
         .then((r) => r.json())
         .then((br) => {
-          const brStatesCapitals = require('@/utils/br-states-capitals.json');
+          const brStatesCapitals = require('@/utils/br-states.json');
 
           const geoData = ChartGeo.topojson.feature(
             br,
@@ -34,7 +34,10 @@ export default {
             datasets: [
               {
                 outline: geoData,
+                outlineBorderColor: 'white',
+                outlineBackgroundColor: 'rgba(205, 205, 205, 1)',
                 showOutline: true,
+                backgroundColor: 'red', // COR DAS BUBBLES
                 data: brStatesCapitals.map((i) => ({
                   name: i.name,
                   latitude: i.latitude,
@@ -51,23 +54,6 @@ export default {
             },
             scale: {
               projection: 'mercator',
-            },
-            scales: {
-              size: {
-                axis: 'x',
-                size: [1, 20],
-              },
-            },
-            geo: {
-              colorScale: {
-                display: true,
-                interpolate: 'reds',
-                missing: 'white',
-                legend: {
-                  display: 'true',
-                  position: 'bottom-right',
-                },
-              },
             },
           };
 

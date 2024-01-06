@@ -56,7 +56,7 @@ export default {
             geo: {
               colorScale: {
                 display: true,
-                interpolate: 'reds',
+                interpolate: 'greys',
                 missing: 'white',
                 legend: {
                   display: 'true',
