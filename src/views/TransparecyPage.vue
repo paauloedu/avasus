@@ -44,19 +44,23 @@
         <div class="usuarios-por-curso">
           <h2>Usuários por curso</h2>
           <div class="chart">
-            <!-- <pie-chart
+            <pie-chart
               v-if="loaded"
               :usuarios-por-curso="transparencia.usuarios_por_curso"
-            /> -->
+            />
           </div>
         </div>
         <div class="usuarios-por-estado">
           <h2>Usuários por Estado</h2>
-          <MapChart />
-          <ChartComponent class="chart" />
+          <MapChart
+            v-if="loaded"
+            :usuarios-por-estado="transparencia.usuarios_por_estado"
+            class="chart"
+          />
+          <!-- <ChartComponent class="chart" /> -->
         </div>
       </div>
-      <ChartComponent class="chart" />
+      <MapChart class="chart" />
     </div>
   </div>
 </template>
@@ -65,16 +69,16 @@
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import TransparenciaDTO from '@/dto/TransparenciaDTO';
 import { obterTransparencia } from '@/services/transparenciaService';
-// import PieChart from '@/components/PieChart.vue';
+import PieChart from '@/components/PieChart.vue';
 import MapChart from '@/components/MapChart.vue';
-import ChartComponent from '@/components/ChartComponent.vue';
+// import ChartComponent from '@/components/ChartComponent.vue';
 
 export default {
   components: {
     BreadCrumbs,
-    // PieChart,
+    PieChart,
     MapChart,
-    ChartComponent,
+    // ChartComponent,
   },
   data: () => ({
     transparencia: TransparenciaDTO,

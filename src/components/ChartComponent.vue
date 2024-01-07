@@ -19,7 +19,7 @@ export default {
       )
         .then((r) => r.json())
         .then((br) => {
-          const brStatesCapitals = require('@/utils/br-states.json');
+          const brStatesCapitals = require('@/utils/br-states-capitals.json');
 
           const geoData = ChartGeo.topojson.feature(
             br,
@@ -34,14 +34,8 @@ export default {
             datasets: [
               {
                 outline: geoData,
-                outlineBorderColor: 'white',
-                outlineBackgroundColor: 'rgba(205, 205, 205, 1)',
-                showOutline: true,
-                backgroundColor: 'red', // COR DAS BUBBLES
-                data: brStatesCapitals.map((i) => ({
-                  name: i.name,
-                  latitude: i.latitude,
-                  longitude: i.longitude,
+                data: geoData.map((i) => ({
+                  feature: i,
                   value: Math.random() * 10,
                 })),
               },
@@ -49,17 +43,32 @@ export default {
           };
 
           const chartOptions = {
+            maintainAspectRatio: true,
+            responsive: true,
+            showOutline: false,
+            showGraticule: false,
             legend: {
               display: false,
             },
             scale: {
               projection: 'mercator',
             },
+            geo: {
+              colorScale: {
+                display: true,
+                interpolate: 'greys',
+                missing: 'white',
+                legend: {
+                  display: 'true',
+                  position: 'bottom-right',
+                },
+              },
+            },
           };
 
           const ctx = this.$refs.confirmedGeoCanvas.getContext('2d');
           new Chart(ctx, {
-            type: 'bubbleMap',
+            type: 'choropleth', //bubbleMap
             data: chartData,
             options: chartOptions,
           });
