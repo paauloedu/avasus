@@ -2,7 +2,7 @@
   <div id="header">
     <div class="inside flex">
       <router-link to="/"><img src="../assets/img/logo.png" /></router-link>
-      <NavBar />
+      <NavBar :show-list="showList" />
       <SearchBar />
       <ButtonLogin />
       <ButtonRegister />
@@ -22,6 +22,23 @@ export default {
     ButtonLogin,
     NavBar,
     SearchBar,
+  },
+  data() {
+    return {
+      showList: true,
+    };
+  },
+  mounted() {
+    window.addEventListener('resize', this.updateShowList);
+    this.updateShowList();
+  },
+  methods: {
+    updateShowList() {
+      this.showList = window.innerWidth >= 920; // showList será false abaixo de 920 pixels
+    },
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.updateShowList);
   },
 };
 </script>
@@ -43,5 +60,31 @@ export default {
   .flex {
     justify-content: space-between;
   }
+}
+
+@media only screen and (min-width: 920px) and (max-width: 1279px) {
+  #header {
+    .inside {
+      width: 920px;
+      .v-autocomplete,
+      .btn-cadastrar {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 919px) {
+  #header {
+    .inside {
+      width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 479px) {
 }
 </style>

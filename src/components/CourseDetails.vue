@@ -94,4 +94,12 @@ export default {
     font-weight: bold;
   }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 919px) {
+  .curso-info {
+    span {
+      font-size: 15px;
+    }
+  }
+}
 </style>

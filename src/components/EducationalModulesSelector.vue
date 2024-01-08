@@ -17,6 +17,7 @@
         :key="item"
         :value="item.tipoConsulta"
       >
+        <!-- Renderiza o component a depender de cada caso -->
         <component :is="item.component" :tipo-consulta="item.tipo_consulta" />
       </v-window-item>
     </v-window>

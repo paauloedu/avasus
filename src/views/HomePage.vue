@@ -66,4 +66,11 @@ h1 {
   color: $cor-primaria;
   font-size: 29px;
 }
+@media only screen and (min-width: 768px) and (max-width: 919px) {
+  .config {
+    .inside {
+      width: 768px;
+    }
+  }
+}
 </style>

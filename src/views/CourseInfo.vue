@@ -148,4 +148,19 @@ export default {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 919px) {
+  .config {
+    .inside,
+    .parallax {
+      width: 768px;
+    }
+  }
+  .justify {
+    padding: 0 10px;
+  }
+  .galeria {
+    padding: 0 30px;
+  }
+}
 </style>

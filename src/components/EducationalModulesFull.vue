@@ -1,4 +1,5 @@
 <template>
+  <!-- TODO: Ver todos? -->
   <div class="resultados">
     <span
       >{{ Math.min(this.page * 6, this.totalResults) }} de
@@ -159,6 +160,14 @@ export default {
     .btn-curso {
       color: $cor-botao;
       font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 919px) {
+  .row {
+    .curso {
+      width: 370px;
     }
   }
 }

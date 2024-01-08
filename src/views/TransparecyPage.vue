@@ -60,7 +60,6 @@
           <!-- <ChartComponent class="chart" /> -->
         </div>
       </div>
-      <MapChart class="chart" />
     </div>
   </div>
 </template>
@@ -171,5 +170,12 @@ h2 {
   display: flex;
   border-radius: 15px;
   padding: 15px;
+}
+@media only screen and (min-width: 768px) and (max-width: 919px) {
+  .flex {
+    .inside {
+      width: 768px;
+    }
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <base-button>Cadastrar</base-button>
+  <base-button class="btn-cadastrar">Cadastrar</base-button>
 </template>
 
 <script>
