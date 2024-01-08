@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     generateMap() {
-      //TODO: Mudança na legenda alterou o tolltip, ajustar
+      //FIXME: Mudança na legenda alterou o tolltip, ajustar
       const chartData = {
         labels: this.usuariosPorCurso.map(
           (curso) => `${curso.curso}: ${curso.usuarios}`

@@ -36,7 +36,6 @@ export default {
     },
   },
   data() {
-    //TODO: Verificar essa prop
     return {
       tab: null,
     };

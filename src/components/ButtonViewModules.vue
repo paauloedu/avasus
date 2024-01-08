@@ -1,5 +1,4 @@
 <template>
-  <!-- TODO: Tornar clicavel -->
   <base-button class="ver-modulos">Ver módulos</base-button>
 </template>
 

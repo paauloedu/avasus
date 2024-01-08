@@ -16,14 +16,13 @@
           <li><router-link to="/transparencia">Transparência</router-link></li>
         </ul>
       </div>
-      <!-- TODO: Mudar o icon do facebook -->
       <div>
         <h2>Redes Sociais</h2>
         <ul class="redes">
           <li>
             <a href="https://www.facebook.com/LAIS.HUOL" target="_blank"
-              ><v-icon icon="mdi-facebook"></v-icon
-            ></a>
+              ><img src="../assets/img/facebook.png"
+            /></a>
           </li>
           <li>
             <a href="https://twitter.com/laishuol" target="_blank"
@@ -68,6 +67,13 @@ h2 {
 .redes {
   display: inline-flex;
   gap: 50%;
+  a img {
+    filter: invert(1);
+  }
+  a {
+    display: block;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 550px) {

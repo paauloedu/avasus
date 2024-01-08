@@ -14,7 +14,9 @@
 
       <CourseDetails :curso="curso" />
 
-      <ButtonViewModules />
+      <router-link :to="{ name: 'cursos-detalhes', params: { id: curso.id } }"
+        ><ButtonViewModules
+      /></router-link>
     </div>
   </div>
 </template>
