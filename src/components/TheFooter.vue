@@ -24,4 +24,7 @@ export default {
 #footer {
   width: 100%;
 }
+
+@media only screen and (max-width: 767px) {
+}
 </style>

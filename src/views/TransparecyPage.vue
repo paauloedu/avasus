@@ -174,8 +174,20 @@ h2 {
 @media only screen and (min-width: 768px) and (max-width: 919px) {
   .flex {
     .inside {
-      width: 768px;
+      width: 750px;
     }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .flex {
+    .inside {
+      width: 460px;
+    }
+  }
+  .usuarios {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 </style>

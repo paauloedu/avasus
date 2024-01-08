@@ -1,6 +1,10 @@
 <template>
   <div>
-    <canvas ref="confirmedGeoCanvas" width="280" height="260"></canvas>
+    <canvas
+      ref="confirmedGeoCanvas"
+      :width="getChartWidth()"
+      :height="getChartHeight()"
+    ></canvas>
   </div>
 </template>
 
@@ -80,6 +84,22 @@ export default {
             options: chartOptions,
           });
         });
+    },
+    getChartWidth() {
+      if (window.innerWidth >= 920) {
+        return 280;
+      }
+      if (window.innerWidth < 920) {
+        return 80;
+      }
+    },
+    getChartHeight() {
+      if (window.innerWidth >= 920) {
+        return 260;
+      }
+      if (window.innerWidth < 920) {
+        return 60;
+      }
     },
   },
 };

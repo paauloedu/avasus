@@ -153,14 +153,41 @@ export default {
   .config {
     .inside,
     .parallax {
-      width: 768px;
+      width: 750px;
     }
-  }
-  .justify {
-    padding: 0 10px;
   }
   .galeria {
     padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .config {
+    .inside,
+    .parallax {
+      width: 460px;
+    }
+    .inside {
+      h1 {
+        font-size: 26px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+    }
+    .parallax {
+      h1 {
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 14px;
+      }
+    }
+  }
+  .galeria {
+    .curso-imagem {
+      flex: 0 0 50%;
+    }
   }
 }
 </style>

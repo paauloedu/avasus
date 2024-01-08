@@ -43,4 +43,10 @@
     color: $cor-botao;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .parceiros {
+    flex-direction: column;
+  }
+}
 </style>

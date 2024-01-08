@@ -1,16 +1,14 @@
 <template>
   <div class="flex">
     <div v-for="(curso, index) in cursos" :key="index" class="curso">
-      <v-img
-        :src="curso.capa"
-        class="curso-imagem"
-        height="90"
-        width="90"
-        cover
-      ></v-img>
+      <router-link :to="{ name: 'cursos-detalhes', params: { id: curso.id } }"
+        ><v-img :src="curso.capa" class="curso-imagem" cover></v-img
+      ></router-link>
 
       <div class="card">
-        <p class="card-title">{{ curso.titulo }}</p>
+        <router-link :to="{ name: 'cursos-detalhes', params: { id: curso.id } }"
+          ><p class="card-title">{{ curso.titulo }}</p></router-link
+        >
         <span class="card-subtitle">{{ curso.parceiros }}</span>
       </div>
 
@@ -80,6 +78,8 @@ export default {
   gap: 14px;
   .curso-imagem {
     border-radius: 15px;
+    height: 90px;
+    width: 90px;
   }
   .card {
     min-width: 30%;
@@ -99,6 +99,32 @@ export default {
       color: $vermelho-detalhe;
       font-weight: 600;
       font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 919px) {
+  .flex {
+    .curso {
+      .ver-modulos {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .flex {
+    .curso {
+      flex-direction: column;
+      .ver-modulos {
+        display: none;
+      }
+      .curso-imagem {
+        border-radius: 15px;
+        height: 200px;
+        width: 430px;
+      }
     }
   }
 }

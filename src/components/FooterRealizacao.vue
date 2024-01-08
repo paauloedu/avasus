@@ -32,4 +32,15 @@
     gap: 80px;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .realizacao {
+    .inside {
+      max-width: 460px;
+      .execucao img {
+        width: 180px;
+      }
+    }
+  }
+}
 </style>

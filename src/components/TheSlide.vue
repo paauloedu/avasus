@@ -1,5 +1,5 @@
 <template>
-  <v-carousel cycle interval="5000" height="800">
+  <v-carousel cycle interval="5000" :height="getChartHeight()">
     <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" cover>
       <div v-if="i === 0" class="description">
         <img src="@/assets/img/avasus.png" />
@@ -36,6 +36,16 @@ export default {
       ],
     };
   },
+  methods: {
+    getChartHeight() {
+      if (window.innerWidth >= 920) {
+        return 800;
+      }
+      if (window.innerWidth < 920) {
+        return 500;
+      }
+    },
+  },
 };
 </script>
 
@@ -52,6 +62,15 @@ export default {
     height: 2px;
     background-color: white;
     margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  //TODO: Remover os botões > e <
+  .description {
+    img {
+      width: 400px;
+    }
   }
 }
 </style>

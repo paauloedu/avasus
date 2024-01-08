@@ -8,16 +8,12 @@
   </div>
   <div class="flex row">
     <div v-for="(curso, index) in cursos" :key="index" class="curso">
-      <v-img
-        :src="curso.capa"
-        class="curso-imagem"
-        height="180"
-        width="100%"
-        cover
-      ></v-img>
+      <v-img :src="curso.capa" class="curso-imagem" cover />
 
       <div class="card">
-        <p class="card-title">{{ curso.titulo }}</p>
+        <router-link :to="{ name: 'cursos-detalhes', params: { id: curso.id } }"
+          ><p class="card-title">{{ curso.titulo }}</p></router-link
+        >
         <span class="card-subtitle">{{ curso.parceiros }}</span>
       </div>
 
@@ -119,6 +115,8 @@ export default {
   margin-bottom: 20px;
   .curso-imagem {
     border-radius: 15px;
+    height: 180px;
+    width: 100%;
   }
   .card {
     min-width: 30%;
@@ -167,7 +165,19 @@ export default {
 @media only screen and (min-width: 768px) and (max-width: 919px) {
   .row {
     .curso {
-      width: 370px;
+      width: 365px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .row {
+    .curso {
+      width: 460px;
+      .curso-imagem {
+        height: 220px;
+        width: 100%;
+      }
     }
   }
 }

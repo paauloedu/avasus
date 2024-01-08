@@ -1,6 +1,10 @@
 <template>
   <div>
-    <canvas ref="pie" width="400" height="400"></canvas>
+    <canvas
+      ref="pie"
+      :width="getChartWidth()"
+      :height="getChartHeight()"
+    ></canvas>
   </div>
 </template>
 
@@ -53,6 +57,22 @@ export default {
         data: chartData,
         options: chartOptions,
       });
+    },
+    getChartWidth() {
+      if (window.innerWidth >= 920) {
+        return 280;
+      }
+      if (window.innerWidth < 920) {
+        return 200;
+      }
+    },
+    getChartHeight() {
+      if (window.innerWidth >= 920) {
+        return 260;
+      }
+      if (window.innerWidth < 920) {
+        return 180;
+      }
     },
   },
 };

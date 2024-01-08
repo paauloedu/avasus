@@ -1,30 +1,39 @@
 <template>
   <div v-if="showDate" class="curso-info" :class="{ small: small }">
-    <v-icon icon="mdi-clock" />
-    <!-- TODO: Criar utilitario -->
-    <span>{{ cursoValue.duracao.replace('h', ' horas') }}</span>
+    <div>
+      <v-icon icon="mdi-clock" />
+      <!-- TODO: Criar utilitario -->
+      <span>{{ cursoValue.duracao.replace('h', ' horas') }}</span>
+    </div>
 
-    <v-icon icon="mdi-calendar-check" />
-    <span>Desde {{ cursoValue.criado_em }}</span>
+    <div>
+      <v-icon icon="mdi-calendar-check" />
+      <span>Desde {{ cursoValue.criado_em }}</span>
+    </div>
 
-    <v-icon icon="mdi-account-multiple" />
-    <span>{{ cursoValue.matriculados }} alunos matriculados</span>
+    <div>
+      <v-icon icon="mdi-account-multiple" />
+      <span>{{ cursoValue.matriculados }} alunos matriculados</span>
+    </div>
 
-    <v-rating
-      v-model="cursoValue.avaliacao"
-      half-increments
-      readonly
-      density="compact"
-    />
-    <!-- TODO: Criar utilitario -->
-    <span
-      >{{
-        cursoValue.avaliacao % 1 === 0
-          ? cursoValue.avaliacao.toFixed(1)
-          : cursoValue.avaliacao
-      }}
-      ({{ cursoValue.numero_avaliacoes }} avaliações)</span
-    >
+    <div>
+      <v-rating
+        v-model="cursoValue.avaliacao"
+        half-increments
+        readonly
+        density="compact"
+        class="rating"
+      />
+      <!-- TODO: Criar utilitario -->
+      <span
+        >{{
+          cursoValue.avaliacao % 1 === 0
+            ? cursoValue.avaliacao.toFixed(1)
+            : cursoValue.avaliacao
+        }}
+        ({{ cursoValue.numero_avaliacoes }} avaliações)</span
+      >
+    </div>
   </div>
   <!-- Telas sem data -->
   <div v-else class="infos" :class="{ small: small }">
@@ -87,18 +96,38 @@ export default {
 }
 .curso-info {
   @extend .infos;
+  align-items: baseline;
   justify-content: space-between;
   gap: 0;
   span {
     font-size: 17px;
     font-weight: bold;
   }
+  .rating {
+    top: 7px;
+    position: relative;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 919px) {
   .curso-info {
     span {
-      font-size: 15px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .curso-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    span {
+      font-size: 14px;
+    }
+    .rating {
+      top: 7px;
+      position: relative;
     }
   }
 }

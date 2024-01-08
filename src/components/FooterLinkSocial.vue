@@ -69,4 +69,29 @@ h2 {
   display: inline-flex;
   gap: 50%;
 }
+
+@media only screen and (max-width: 550px) {
+  .links-redes {
+    .inside {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      img {
+        display: none;
+      }
+    }
+  }
+  .links {
+    padding-right: 0px;
+    a {
+      font-size: 18px;
+    }
+    ul li {
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}
 </style>

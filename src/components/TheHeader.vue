@@ -77,12 +77,20 @@ export default {
 @media only screen and (min-width: 768px) and (max-width: 919px) {
   #header {
     .inside {
-      width: 768px;
+      width: 750px;
     }
   }
 }
 
 @media only screen and (max-width: 767px) {
+  #header {
+    .inside {
+      width: 460px;
+      .btn-cadastrar {
+        display: none;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 479px) {
