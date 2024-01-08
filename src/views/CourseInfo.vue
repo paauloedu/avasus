@@ -190,4 +190,29 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 467px) {
+  .config {
+    .inside,
+    .parallax {
+      width: 360px;
+    }
+    .inside {
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
+    .parallax {
+      h1 {
+        font-size: 18px;
+      }
+      h2 {
+        font-size: 14px;
+      }
+    }
+  }
+}
 </style>

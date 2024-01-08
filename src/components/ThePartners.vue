@@ -49,4 +49,10 @@
     flex-direction: column;
   }
 }
+
+@media only screen and (max-width: 467px) {
+  .parceiros li {
+    margin-bottom: 10px;
+  }
+}
 </style>

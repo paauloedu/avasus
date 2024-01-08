@@ -93,6 +93,15 @@ export default {
   }
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 467px) {
+  #header {
+    .inside {
+      width: 360px;
+      .btn-cadastrar,
+      .btn-login {
+        display: none;
+      }
+    }
+  }
 }
 </style>

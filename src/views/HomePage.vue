@@ -81,4 +81,16 @@ h1 {
     }
   }
 }
+
+@media only screen and (max-width: 467px) {
+  .config {
+    .inside {
+      width: 360px;
+      .btn-cadastrar,
+      .btn-login {
+        display: none;
+      }
+    }
+  }
+}
 </style>

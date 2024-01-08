@@ -43,4 +43,15 @@
     }
   }
 }
+
+@media only screen and (max-width: 467px) {
+  .realizacao {
+    .inside {
+      max-width: 360px;
+      .execucao img {
+        width: 100px;
+      }
+    }
+  }
+}
 </style>

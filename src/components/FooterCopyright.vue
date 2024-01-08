@@ -14,4 +14,12 @@
     justify-content: center;
   }
 }
+
+@media only screen and (max-width: 467px) {
+  .copyright {
+    .flex {
+      font-size: 12px;
+    }
+  }
+}
 </style>

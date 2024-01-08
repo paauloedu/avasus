@@ -190,4 +190,12 @@ h2 {
     gap: 20px;
   }
 }
+
+@media only screen and (max-width: 467px) {
+  .flex {
+    .inside {
+      width: 360px;
+    }
+  }
+}
 </style>

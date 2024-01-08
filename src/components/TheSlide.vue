@@ -40,9 +40,10 @@ export default {
     getChartHeight() {
       if (window.innerWidth >= 920) {
         return 800;
-      }
-      if (window.innerWidth < 920) {
+      } else if (window.innerWidth >= 468) {
         return 500;
+      } else {
+        return 250;
       }
     },
   },
@@ -70,6 +71,14 @@ export default {
   .description {
     img {
       width: 400px;
+    }
+  }
+}
+
+@media only screen and (max-width: 467px) {
+  .description {
+    img {
+      width: 260px;
     }
   }
 }

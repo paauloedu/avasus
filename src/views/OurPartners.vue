@@ -29,6 +29,7 @@
         v-model="page"
         :total-visible="5"
         :length="Math.ceil(this.totalResults / 6)"
+        density="compact"
       />
     </div>
   </div>
@@ -148,6 +149,14 @@ h1 {
     }
     .parceiros-titulo {
       font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 467px) {
+  .config {
+    .inside {
+      width: 360px;
     }
   }
 }

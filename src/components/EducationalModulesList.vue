@@ -128,4 +128,16 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .flex {
+    .curso {
+      .curso-imagem {
+        border-radius: 15px;
+        height: 190px;
+        width: 330px;
+      }
+    }
+  }
+}
 </style>

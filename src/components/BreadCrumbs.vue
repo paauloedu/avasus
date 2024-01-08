@@ -32,4 +32,10 @@ export default {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+@media only screen and (max-width: 467px) {
+  .v-breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
 </style>

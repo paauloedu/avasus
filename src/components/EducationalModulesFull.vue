@@ -37,6 +37,7 @@
     v-model="page"
     :total-visible="5"
     :length="Math.ceil(this.totalResults / 6)"
+    density="compact"
   />
 </template>
 
@@ -178,6 +179,14 @@ export default {
         height: 220px;
         width: 100%;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 467px) {
+  .row {
+    .curso {
+      width: 360px;
     }
   }
 }
