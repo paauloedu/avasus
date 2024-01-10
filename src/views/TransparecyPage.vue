@@ -57,7 +57,6 @@
             :usuarios-por-estado="transparencia.usuarios_por_estado"
             class="chart"
           />
-          <!-- <ChartComponent class="chart" /> -->
         </div>
       </div>
     </div>
@@ -70,14 +69,12 @@ import TransparenciaDTO from '@/dto/TransparenciaDTO';
 import { obterTransparencia } from '@/services/transparenciaService';
 import PieChart from '@/components/PieChart.vue';
 import MapChart from '@/components/MapChart.vue';
-// import ChartComponent from '@/components/ChartComponent.vue';
 
 export default {
   components: {
     BreadCrumbs,
     PieChart,
     MapChart,
-    // ChartComponent,
   },
   data: () => ({
     transparencia: TransparenciaDTO,

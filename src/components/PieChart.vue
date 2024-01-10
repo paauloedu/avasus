@@ -10,7 +10,7 @@
 
 <script>
 import * as Chart from 'chart.js';
-import { legendFormatter } from '@/utils/legendFormatterUtils';
+import { legendFormatter } from '@/utils/formatUtils';
 
 export default {
   props: {

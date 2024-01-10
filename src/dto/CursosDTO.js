@@ -18,9 +18,8 @@ export default class CursoDTO {
     conteudo,
     creditos,
   }) {
-    // TODO: Revisar
     this.id = Number(id);
-    this.cateroria = cateroria;
+    this.categoria = cateroria;
     this.capa = capa;
     this.titulo = titulo;
     this.parceiros = parceiros;

@@ -1,5 +1,4 @@
 <template>
-  <!-- TODO: Ver todos? -->
   <div class="resultados">
     <span
       >{{ Math.min(this.page * 6, this.totalResults) }} de
@@ -32,12 +31,12 @@
       </div>
     </div>
   </div>
-  <!-- TODO: Personalizar o CSS -->
   <v-pagination
     v-model="page"
     :total-visible="5"
     :length="Math.ceil(this.totalResults / 6)"
     density="compact"
+    class="v-pagination"
   />
 </template>
 
@@ -48,7 +47,7 @@ import CourseDetails from './CourseDetails.vue';
 export default {
   props: {
     tipoConsulta: {
-      type: String,
+      type: [String, null],
       required: true,
     },
   },
@@ -72,9 +71,15 @@ export default {
   methods: {
     async atualizarConteudo() {
       try {
-        const totalResultsResponse = await obterCursos({
-          cateroria: this.tipoConsulta,
-        });
+        let totalResultsResponse;
+
+        if (this.tipoConsulta) {
+          totalResultsResponse = await obterCursos({
+            cateroria: this.tipoConsulta,
+          });
+        } else {
+          totalResultsResponse = await obterCursos();
+        }
 
         this.cursos = await obterCursos({
           _page: this.page,
@@ -160,6 +165,14 @@ export default {
       color: $cor-botao;
       font-size: 12px;
     }
+  }
+}
+.v-pagination {
+  :deep(li.v-pagination__item--is-active) {
+    background-color: $cor-primaria;
+    border-radius: 6px;
+    color: white;
+    border-radius: 6px;
   }
 }
 

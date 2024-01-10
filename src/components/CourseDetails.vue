@@ -2,7 +2,6 @@
   <div v-if="showDate" class="curso-info" :class="{ small: small }">
     <div>
       <v-icon icon="mdi-clock" />
-      <!-- TODO: Criar utilitario -->
       <span>{{ cursoValue.duracao.replace('h', ' horas') }}</span>
     </div>
 
@@ -24,7 +23,6 @@
         density="compact"
         class="rating"
       />
-      <!-- TODO: Criar utilitario -->
       <span
         >{{
           cursoValue.avaliacao % 1 === 0
@@ -51,7 +49,6 @@
       density="compact"
       class="rating"
     />
-    <!-- TODO: Criar utilitario -->
     <span>{{
       cursoValue.avaliacao % 1 === 0
         ? cursoValue.avaliacao.toFixed(1)

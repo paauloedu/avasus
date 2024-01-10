@@ -71,6 +71,11 @@ export default {
         tipo_consulta: 'OPAS',
         component: 'EducationalModulesFull',
       },
+      {
+        label: 'Ver Todos',
+        tipo_consulta: null,
+        component: 'EducationalModulesFull',
+      },
     ],
   }),
 };
