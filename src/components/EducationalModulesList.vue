@@ -131,7 +131,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 467px) {
   .flex {
     .curso {
       .curso-imagem {
