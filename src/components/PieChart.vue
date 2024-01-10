@@ -10,6 +10,7 @@
 
 <script>
 import * as Chart from 'chart.js';
+import { legendFormatter } from '@/utils/legendFormatterUtils';
 
 export default {
   props: {
@@ -23,11 +24,8 @@ export default {
   },
   methods: {
     generateMap() {
-      //FIXME: Mudança na legenda alterou o tolltip, ajustar
       const chartData = {
-        labels: this.usuariosPorCurso.map(
-          (curso) => `${curso.curso}: ${curso.usuarios}`
-        ),
+        labels: this.usuariosPorCurso.map((curso) => `${curso.curso}`),
         datasets: [
           {
             data: this.usuariosPorCurso.map((curso) => curso.usuarios),
@@ -47,6 +45,7 @@ export default {
             padding: 20,
             fontSize: 14,
             fontStyle: 'bold',
+            generateLabels: legendFormatter,
           },
         },
       };

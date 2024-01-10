@@ -83,7 +83,6 @@ export default {
   async created() {
     try {
       this.curso = await obterCursoPorId(this.$route.params.id);
-      //TODO: Limitar css, agora
       this.items[3].title = this.curso.titulo;
     } catch (error) {
       console.log(error);
