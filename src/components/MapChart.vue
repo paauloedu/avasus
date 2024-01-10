@@ -38,7 +38,6 @@ export default {
 
           console.log(geoData);
           console.log(brStatesCapitals);
-          console.log(this.usuariosPorEstado);
 
           const chartData = {
             labels: geoData.map((d) => d.properties.name),
@@ -48,13 +47,38 @@ export default {
                 outlineBorderColor: 'white',
                 outlineBackgroundColor: 'rgba(205, 205, 205, 1)',
                 showOutline: true,
-                backgroundColor: ['#FFF', '#F6303F', '#707070', '#2F2E41'], // COR DAS BUBBLES
-                data: brStatesCapitals.map((i) => ({
-                  name: i.name,
-                  latitude: i.latitude,
-                  longitude: i.longitude,
-                  value: Math.random() * 10,
-                })),
+                // backgroundColor: ['#FFF', '#F6303F', '#707070', '#2F2E41'], // COR DAS BUBBLES
+                backgroundColor: '#F6303F', // COR PADRÃO
+                data: brStatesCapitals.map((i) => {
+                  const estado = this.usuariosPorEstado.find(
+                    (estado) => estado.estados === i.name
+                  );
+                  const radiusScale = estado
+                    ? estado.usuarios_totais / 11000
+                    : 0;
+                  /* Quantizar valores para as bubbles?
+
+                  let radiusScale;
+
+                  if (estado.usuarios_totais >= 200000) {
+                    radiusScale = 20;
+                  } else if (estado.usuarios_totais >= 150000) {
+                    radiusScale = 15;
+                  } else if (estado.usuarios_totais >= 100000) {
+                    radiusScale = 10;
+                  } else {
+                    radiusScale = 8;
+                  }
+                  
+                  */
+                  return {
+                    name: i.name,
+                    latitude: i.latitude,
+                    longitude: i.longitude,
+                    value: estado ? estado.usuarios_totais : 0,
+                    r: radiusScale,
+                  };
+                }),
               },
             ],
           };

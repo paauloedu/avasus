@@ -1,136 +1,136 @@
 [
   {
-    "name": "Goiás",
+    "name": "GO",
     "latitude": -16.64,
     "longitude": -49.31
   },
   {
-    "name": "São Paulo",
+    "name": "SP",
     "latitude": -23.55,
     "longitude": -46.64
   },
   {
-    "name": "Pernambuco",
+    "name": "PE",
     "latitude": -8.28,
     "longitude": -35.07
   },
   {
-    "name": "Acre",
+    "name": "AC",
     "latitude": -8.77,
     "longitude": -70.55
   },
   {
-    "name": "Amazonas",
+    "name": "AM",
     "latitude": -3.07,
     "longitude": -61.66
   },
   {
-    "name": "Maranhão",
+    "name": "MA",
     "latitude": -2.55,
     "longitude": -44.3
   },
   {
-    "name": "Pará",
+    "name": "PA",
     "latitude": -5.53,
     "longitude": -52.29
   },
   {
-    "name": "Rondônia",
+    "name": "RO",
     "latitude": -11.22,
     "longitude": -62.8
   },
   {
-    "name": "Tocantins",
+    "name": "TO",
     "latitude": -10.25,
     "longitude": -48.25
   },
   {
-    "name": "Distrito Federal",
+    "name": "DF",
     "latitude": -15.83,
     "longitude": -47.86
   },
   {
-    "name": "Mato Grosso do Sul",
+    "name": "MS",
     "latitude": -20.51,
     "longitude": -54.54
   },
   {
-    "name": "Minas Gerais",
+    "name": "MG",
     "latitude": -18.1,
     "longitude": -44.38
   },
   {
-    "name": "Mato Grosso",
+    "name": "MT",
     "latitude": -12.64,
     "longitude": -55.42
   },
   {
-    "name": "Rio Grande do Sul",
+    "name": "RS",
     "latitude": -30.01,
     "longitude": -51.22
   },
   {
-    "name": "Paraná",
+    "name": "PR",
     "latitude": -24.89,
     "longitude": -51.55
   },
   {
-    "name": "Santa Catarina",
+    "name": "SC",
     "latitude": -27.33,
     "longitude": -49.44
   },
   {
-    "name": "Ceará",
+    "name": "CE",
     "latitude": -3.71,
     "longitude": -38.54
   },
   {
-    "name": "Piauí",
+    "name": "PI",
     "latitude": -8.28,
     "longitude": -43.68
   },
   {
-    "name": "Alagoas",
+    "name": "AL",
     "latitude": -9.71,
     "longitude": -35.73
   },
   {
-    "name": "Bahia",
+    "name": "BA",
     "latitude": -12.96,
     "longitude": -38.51
   },
   {
-    "name": "Espírito Santo",
+    "name": "ES",
     "latitude": -19.19,
     "longitude": -40.34
   },
   {
-    "name": "Paraíba",
+    "name": "PB",
     "latitude": -7.06,
     "longitude": -35.55
   },
   {
-    "name": "Rio de Janeiro",
+    "name": "RJ",
     "latitude": -22.84,
     "longitude": -43.15
   },
   {
-    "name": "Rio Grande do Norte",
+    "name": "RN",
     "latitude": -5.22,
     "longitude": -36.52
   },
   {
-    "name": "Sergipe",
+    "name": "SE",
     "latitude": -10.9,
     "longitude": -37.07
   },
   {
-    "name": "Roraima",
+    "name": "RR",
     "latitude": 1.89,
     "longitude": -61.22
   },
   {
-    "name": "Amapá",
+    "name": "AP",
     "latitude": 1.41,
     "longitude": -51.77
   }
