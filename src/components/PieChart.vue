@@ -10,7 +10,7 @@
 
 <script>
 import * as Chart from 'chart.js';
-import { legendFormatter } from '@/utils/formatUtils';
+import { pieLegendFormatter } from '@/utils/formatUtils';
 
 export default {
   props: {
@@ -45,7 +45,7 @@ export default {
             padding: 20,
             fontSize: 14,
             fontStyle: 'bold',
-            generateLabels: legendFormatter,
+            generateLabels: pieLegendFormatter,
           },
         },
       };

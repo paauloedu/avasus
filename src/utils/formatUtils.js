@@ -1,6 +1,6 @@
 import * as Chart from 'chart.js';
 
-export const legendFormatter = function (chart) {
+export const pieLegendFormatter = function (chart) {
   var data = chart.data;
   if (data.labels.length && data.datasets.length) {
     return data.labels.map(function (label, i) {
@@ -35,6 +35,20 @@ export const legendFormatter = function (chart) {
         index: i,
       };
     });
+  } else {
+    return [];
+  }
+};
+
+export const mapLegendFormatter = function (chart) {
+  const data = chart.data;
+  if (data.labels.length && data.datasets.length) {
+    return [
+      {
+        text: `Usuários por estado`,
+        fillStyle: '#F6303F',
+      },
+    ];
   } else {
     return [];
   }

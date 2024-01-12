@@ -11,6 +11,7 @@
 <script>
 import * as Chart from 'chart.js';
 import * as ChartGeo from 'chartjs-chart-geo';
+import { mapLegendFormatter } from '@/utils/formatUtils';
 
 export default {
   props: {
@@ -82,6 +83,7 @@ export default {
           const chartOptions = {
             legend: {
               display: true,
+              onClick: null,
               align: 'start',
               position: 'bottom',
               labels: {
@@ -90,6 +92,7 @@ export default {
                 padding: 20,
                 fontSize: 14,
                 fontStyle: 'bold',
+                generateLabels: mapLegendFormatter,
               },
             },
             scale: {
@@ -110,7 +113,7 @@ export default {
         return 280;
       }
       if (window.innerWidth < 920) {
-        return 80;
+        return 200;
       }
     },
     getChartHeight() {
@@ -118,7 +121,7 @@ export default {
         return 260;
       }
       if (window.innerWidth < 920) {
-        return 60;
+        return 180;
       }
     },
   },
