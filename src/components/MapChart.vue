@@ -36,9 +36,6 @@ export default {
             br.objects.bra
           ).features;
 
-          console.log(geoData);
-          console.log(brStatesCapitals);
-
           const chartData = {
             labels: geoData.map((d) => d.properties.name),
             datasets: [
@@ -47,7 +44,6 @@ export default {
                 outlineBorderColor: 'white',
                 outlineBackgroundColor: 'rgba(205, 205, 205, 1)',
                 showOutline: true,
-                // backgroundColor: ['#FFF', '#F6303F', '#707070', '#2F2E41'], // COR DAS BUBBLES
                 backgroundColor: '#F6303F', // COR PADRÃO
                 data: brStatesCapitals.map((i) => {
                   const estado = this.usuariosPorEstado.find(

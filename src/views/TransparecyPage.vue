@@ -95,7 +95,6 @@ export default {
     try {
       this.transparencia = await obterTransparencia();
       this.loaded = true;
-      console.log(this.transparencia);
     } catch (error) {
       console.log(error);
     }

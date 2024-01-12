@@ -56,7 +56,6 @@ export default {
           _sort: this.tipoConsulta,
           _order: 'desc',
         });
-        console.log(this.cursos);
       } catch (error) {
         console.log(error);
       }
