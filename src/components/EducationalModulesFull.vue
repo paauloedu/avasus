@@ -110,6 +110,7 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  min-height: 460px;
 }
 .curso {
   display: flex;

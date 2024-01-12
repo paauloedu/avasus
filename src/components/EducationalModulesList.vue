@@ -67,6 +67,7 @@ export default {
 
 <style lang="scss" scoped>
 .flex {
+  min-height: 408px;
   flex-direction: column;
   gap: 20px;
 }
