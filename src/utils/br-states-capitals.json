@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Acre",
+    "description": "Rio Branco",
+    "latitude": -8.77,
+    "longitude": -70.55
+  },
+  {
+    "name": "Alagoas",
+    "description": "Maceió",
+    "latitude": -9.665574,
+    "longitude": -35.735377
+  },
+  {
+    "name": "Amapá",
+    "description": "Macapá",
+    "latitude": 0.034965,
+    "longitude": -51.066773
+  },
+  {
+    "name": "Amazonas",
+    "description": "Manaus",
+    "latitude": -3.119028,
+    "longitude": -60.021731
+  },
+  {
+    "name": "Bahia",
+    "description": "Salvador",
+    "latitude": -12.971405,
+    "longitude": -38.501396
+  },
+  {
+    "name": "Ceará",
+    "description": "Fortaleza",
+    "latitude": -3.71722,
+    "longitude": -38.543303
+  },
+  {
+    "name": "Distrito Federal",
+    "description": "Brasília",
+    "latitude": -15.826691,
+    "longitude": -47.921822
+  },
+  {
+    "name": "Espírito Santo",
+    "description": "Vitória",
+    "latitude": -20.3155,
+    "longitude": -40.3126
+  },
+  {
+    "name": "Goiás",
+    "description": "Goiânia",
+    "latitude": -16.686891,
+    "longitude": -49.264794
+  },
+  {
+    "name": "Maranhão",
+    "description": "São Luís",
+    "latitude": -2.53874,
+    "longitude": -44.282528
+  },
+  {
+    "name": "Mato Grosso",
+    "description": "Cuiabá",
+    "latitude": -15.6014,
+    "longitude": -56.097891
+  },
+  {
+    "name": "Mato Grosso do Sul",
+    "description": "Campo Grande",
+    "latitude": -20.4646,
+    "longitude": -54.6054
+  },
+  {
+    "name": "Minas Gerais",
+    "description": "Belo Horizonte",
+    "latitude": -19.9167,
+    "longitude": -43.9345
+  },
+  {
+    "name": "Pará",
+    "description": "Belém",
+    "latitude": -1.45594,
+    "longitude": -48.4902
+  },
+  {
+    "name": "Paraíba",
+    "description": "João Pessoa",
+    "latitude": -7.11509,
+    "longitude": -34.8641
+  },
+  {
+    "name": "Paraná",
+    "description": "Curitiba",
+    "latitude": -25.4195,
+    "longitude": -49.2646
+  },
+  {
+    "name": "Pernambuco",
+    "description": "Recife",
+    "latitude": -8.04756,
+    "longitude": -34.877
+  },
+  {
+    "name": "Piauí",
+    "description": "Teresina",
+    "latitude": -5.09194,
+    "longitude": -42.8034
+  },
+  {
+    "name": "Rio de Janeiro",
+    "description": "Rio de Janeiro",
+    "latitude": -22.9083,
+    "longitude": -43.1964
+  },
+  {
+    "name": "Rio Grande do Norte",
+    "description": "Natal",
+    "latitude": -5.79447,
+    "longitude": -35.211
+  },
+  {
+    "name": "Rio Grande do Sul",
+    "description": "Porto Alegre",
+    "latitude": -30.0346,
+    "longitude": -51.2177
+  },
+  {
+    "name": "Rondônia",
+    "description": "Porto Velho",
+    "latitude": -8.76192,
+    "longitude": -63.9019
+  },
+  {
+    "name": "Roraima",
+    "description": "Boa Vista",
+    "latitude": 2.81972,
+    "longitude": -60.6715
+  },
+  {
+    "name": "Santa Catarina",
+    "description": "Florianópolis",
+    "latitude": -27.5954,
+    "longitude": -48.548
+  },
+  {
+    "name": "São Paulo",
+    "description": "São Paulo",
+    "latitude": -23.5505,
+    "longitude": -46.6333
+  },
+  {
+    "name": "Sergipe",
+    "description": "Aracaju",
+    "latitude": -10.9472,
+    "longitude": -37.0731
+  },
+  {
+    "name": "Tocantins",
+    "description": "Palmas",
+    "latitude": -10.9472,
+    "longitude": -48.4196
+  }
+]
