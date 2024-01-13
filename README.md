@@ -17,13 +17,15 @@ Este projeto foi desenvolvido como parte da seleção de bolsistas para o Projet
 
 O AVASUS é completamente responsivo, adaptando-se a diferentes dispositivos e tamanhos de tela.
 
-![Desktop](https://github.com/paauloedu/avasus/tree/avasus-dev/src/assets/gif/desktop.gif)
-![Tablet](https://github.com/paauloedu/avasus/tree/avasus-dev/src/assets/gif/tablet.gif)
-![Mobile](https://github.com/paauloedu/avasus/tree/avasus-dev/src/assets/gif/mobile.gif)
+[Desktop](https://github.com/paauloedu/avasus/raw/avasus-dev/src/assets/gif/desktop.gif) | [Tablet](https://github.com/paauloedu/avasus/raw/avasus-dev/src/assets/gif/tablet.gif) | [Celulares](https://github.com/paauloedu/avasus/raw/avasus-dev/src/assets/gif/mobile.gif)
+
+<img src="https://github.com/paauloedu/avasus/raw/avasus-dev/src/assets/gif/mobile.gif" width="200">
 
 ### Gráficos Interativos
 
 Utilizamos a biblioteca Chart.js para criar gráficos interativos, proporcionando uma visualização clara dos dados.
+
+<img src="https://github.com/paauloedu/avasus/raw/avasus-dev/src/assets/gif/chart.gif" width="400">
 
 ### Padrões Vue.js
 
