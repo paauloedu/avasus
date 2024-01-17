@@ -30,7 +30,7 @@
           <div>
             <v-icon class="dados-info" icon="mdi-cash" />
             <span>Investimento médio por curso</span>
-            <p>{{ transparencia.investimento_medio_curso }}</p>
+            <p>{{ formatarMoeda(transparencia.investimento_medio_curso) }}</p>
           </div>
           <div>
             <v-icon class="dados-info" icon="mdi-account-cash" />
@@ -98,6 +98,29 @@ export default {
     } catch (error) {
       console.log(error);
     }
+  },
+  methods: {
+    formatarMoeda(valor) {
+      if (!valor || typeof valor !== 'string') {
+        return 'Formato inválido';
+      }
+
+      const valorNumerico = parseFloat(
+        valor.replace('R$ ', '').replace(',', '.')
+      );
+
+      if (isNaN(valorNumerico)) {
+        return 'Formato inválido';
+      }
+
+      return (
+        'R$ ' +
+        valorNumerico.toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        })
+      );
+    },
   },
 };
 </script>
